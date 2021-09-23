@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Overdrive Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><i>Overdrive</i> Search</h1>
+    </header>
+    
+    <main>
+        <div class="search-container">
+            <form id="overdrive-search">
+                <label for="search">Search</label><input type="text" id="search">
+                <button id="submit">Submit</button>
+            </form>
+    
+            <div id="results-container">
+                <h2 class="results-title">Results</h2>
+                <button id="open-all-links">Open All Links</button>
+                <div id="links-container"></div>
+            </div>
+        </div>
+
+        <div class="add-library hidden">
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Created by Kelly Finnerty</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

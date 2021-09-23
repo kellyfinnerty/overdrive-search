@@ -1,0 +1,104 @@
+:root{
+    --pink: #FF006E; 
+    --orange: #FB5607;
+    --purple: #8338EC;
+    --blue: #3A86FF;
+    --gold: #FFBE0B;
+    --white: #f8f8ff;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: var(--pink);
+}
+
+.search-container{
+    display: grid;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    width: 100%;
+}
+
+h1, h2{
+    font-weight: 500;
+}
+
+#results-container h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+button{
+    border: none;
+    background-color: var(--blue);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+#open-all-links{
+    font-size: 1.1em;
+    padding: 0.5em;
+    justify-self: center;
+}
+
+.hidden{
+    display: none;
+}
+
+input{
+    color: gray;
+}
+
+#results-container{
+    display: grid;
+    grid-template-rows: 5em 3em auto;
+    grid-auto-columns: max-content;
+    width: 100%;
+    gap: 1em;
+    padding-bottom: 25px;
+    height: auto;
+
+    background-color: var(--orange);
+    border-radius: 4px;
+}
+
+#links-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 24%);
+    grid-auto-rows: 10em;
+    gap: 1% 4%;
+}
+
+.overdrive-link{
+    background-color: var(--purple);
+    border: solid 6px var(--gold);
+    border-radius: 3px 3px;
+    padding: 1px;
+    width: 100%;
+    height: 90%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8em;
+    word-wrap: break-word;
+    justify-content: center;
+    align-content: center;
+}
+
+.overdrive-link div{
+    align-self: center;
+    justify-self: center;
+}
+
+.overdrive-link:hover{
+    text-decoration: none;
+    color: orange;
+}
