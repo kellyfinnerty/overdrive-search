@@ -71,6 +71,8 @@ function removePreviousLinks() {
 }
 
 function createLinkBox(website) {
+  document.querySelector(".search-container").classList.remove("hidden");
+
   const container = document.getElementById("links-container");
 
   const overdriveLink = document.createElement("a");
@@ -103,6 +105,15 @@ function openAllLinks() {
   }
 }
 
+function clearResults() {
+  document.querySelector(".search-container").classList.add("hidden");
+}
+
+function showSiteManagement() {
+  const container = document.querySelector(".add-library");
+  container.classList.remove("hidden");
+}
+
 form.querySelector("button").addEventListener("click", (e) => {
   e.preventDefault();
   removePreviousLinks();
@@ -112,4 +123,9 @@ form.querySelector("button").addEventListener("click", (e) => {
 
 document.querySelector("#open-all-links").addEventListener("click", () => {
   openAllLinks();
+});
+
+document.querySelector("#manage-user-sites").addEventListener("click", () => {
+  clearResults();
+  showSiteManagement();
 });

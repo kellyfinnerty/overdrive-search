@@ -12,14 +12,15 @@
 <body>
     <header>
         <h1><i>Overdrive</i> Search</h1>
+        <form id="overdrive-search">
+            <input type="text" id="search" placeholder="Search a book, author or both...">
+            <button id="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button id="manage-user-sites">Manage Your Library Resources</button>
     </header>
     
     <main>
         <div class="search-container">
-            <form id="overdrive-search">
-                <input type="text" id="search" placeholder="Search a book, author or both...">
-                <button id="submit"><i class="fas fa-search"></i></button>
-            </form>
     
             <div id="results-container">
                 <h2 class="results-title">Results</h2>
@@ -29,7 +30,17 @@
         </div>
 
         <div class="add-library hidden">
-
+            <form id="add-website">
+                <select name="resource" id="resource" required>
+                    <option disabled>Select an option...</option>
+                    <option value="overdrive">Overdrive</option>
+                    <option value="cloud-library">Cloud Library</option>
+                    <option value="hoopla">Hoopla</option>
+                </select>
+                <input type="text" id="resource-name" placeholder="Website Name" minlength="1" maxlength="25" required>
+                <input type="text" id="resoure-link" placeholder="Website URL..." required>
+                <button>Add Library</button>
+            </form>
         </div>
 
     </main>

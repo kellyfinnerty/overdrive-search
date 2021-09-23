@@ -1,6 +1,7 @@
 :root{
     --pink: #FF006E; 
-    --orange: #FB5607;
+    --original-orange: #FB5607;
+    --orange: #fb5407be;
     --purple: #8338EC;
     --blue: #3A86FF;
     --gold: #FFBE0B;
@@ -20,8 +21,7 @@ body{
 .search-container{
     display: grid;
     justify-content: center;
-    grid-auto-columns: max-content;
-    width: 100%;
+    grid-auto-columns: 100%;
 }
 
 h1, h2{
@@ -30,7 +30,7 @@ h1, h2{
 
 #results-container h2{
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 button{
@@ -76,10 +76,10 @@ input:focus{
 #results-container{
     display: grid;
     grid-template-rows: 5em 3em auto;
-    grid-auto-columns: max-content;
+    grid-auto-columns: auto;
     width: 100%;
     gap: 1em;
-    padding-bottom: 25px;
+
     height: auto;
 
     background-color: var(--orange);
@@ -88,10 +88,13 @@ input:focus{
 
 #links-container{
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 24%);
-    grid-auto-rows: 10em;
-    gap: 1% 4%;
+    width: 50%;
+    height: auto;
+    grid-template-columns: repeat(4, 8em);
+    grid-auto-rows: 8em;
+    gap: 1.2em;
+    align-self: center;
+    justify-self: center;
 }
 
 #overdrive-search{
@@ -100,14 +103,14 @@ input:focus{
 
 .overdrive-link{
     background-color: var(--purple);
-    border: solid 6px var(--gold);
-    border-radius: 3px 3px;
+    border: solid 5px var(--gold);
+    border-radius: 3px;
     padding: 1px;
-    width: 100%;
+    width: 90%;
     height: 90%;
     text-decoration: none;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.3em;
     word-wrap: break-word;
     justify-content: center;
     align-content: center;
