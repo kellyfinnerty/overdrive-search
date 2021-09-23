@@ -5,11 +5,12 @@
     --blue: #3A86FF;
     --gold: #FFBE0B;
     --white: #f8f8ff;
+    --placeholder-white:rgba(255, 255, 255, 0.651);
 }
 
 *{
     font-family: 'Raleway', sans-serif;
-    color: white;
+    color: var(--white);
 }
 
 body{
@@ -49,12 +50,27 @@ button:hover{
     justify-self: center;
 }
 
+#submit{
+    background-color: transparent;
+    font-size: 1.2em;
+}
+
 .hidden{
     display: none;
 }
 
 input{
-    color: gray;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em;
+    width: 20em;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 2px;
+}
+
+input:focus{
+    outline: none;
 }
 
 #results-container{
@@ -76,6 +92,10 @@ input{
     grid-template-columns: repeat(3, 24%);
     grid-auto-rows: 10em;
     gap: 1% 4%;
+}
+
+#overdrive-search{
+    margin: 2em;
 }
 
 .overdrive-link{
@@ -102,3 +122,17 @@ input{
     text-decoration: none;
     color: orange;
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--placeholder-white);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.815);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.822);
+  }
