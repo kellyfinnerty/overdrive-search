@@ -109,6 +109,10 @@ function clearResults() {
   document.querySelector(".search-container").classList.add("hidden");
 }
 
+function clearSiteManagement() {
+  document.querySelector(".add-library").classList.add("hidden");
+}
+
 function showSiteManagement() {
   const container = document.querySelector(".add-library");
   container.classList.remove("hidden");
@@ -116,6 +120,7 @@ function showSiteManagement() {
 
 form.querySelector("button").addEventListener("click", (e) => {
   e.preventDefault();
+  clearSiteManagement();
   removePreviousLinks();
   submitForm();
   form.reset();
