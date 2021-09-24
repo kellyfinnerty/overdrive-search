@@ -103,7 +103,7 @@ function openAllLinks() {
   const currLinks = document.querySelectorAll(".overdrive-link");
 
   for (const link of currLinks) {
-    window.open(link.href, (target = "_blank"));
+    window.open(link.href, "_blank");
   }
 }
 
