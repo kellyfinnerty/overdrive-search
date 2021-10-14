@@ -3,12 +3,18 @@ import mySites from "./StorageManager.js";
 const form = document.getElementById("overdrive-search");
 
 export default function initDisplay() {
+  const searchTerm = form.querySelector("input");
+  searchTerm.addEventListener("input", (e) => {
+    try {
+      checkInputValidity();
+    } catch (e) {
+      console.log(e);
+      return;
+    }
+  });
+
   form.querySelector("button").addEventListener("click", (e) => {
-    e.preventDefault();
-    clearSiteManagement();
-    removePreviousLinks();
-    submitForm();
-    form.reset();
+    userSubmitsForm(e);
   });
 
   document.querySelector("#open-all-links").addEventListener("click", () => {
@@ -19,6 +25,38 @@ export default function initDisplay() {
     clearResults();
     showSiteManagement();
   });
+}
+
+function userSubmitsForm(e) {
+  e.preventDefault();
+
+  try {
+    checkInputValidity();
+  } catch {
+    return;
+  }
+
+  clearSiteManagement();
+  removePreviousLinks();
+  submitForm();
+  form.reset();
+}
+
+function checkInputValidity() {
+  const searchTerm = form.querySelector("input");
+  const errorArea = document.getElementById("search-error");
+
+  if (searchTerm.validity.valueMissing) {
+    errorArea.classList.remove("hidden");
+    errorArea.textContent = "Please type something before searching!";
+    throw "Please type something before searching!";
+  } else if (!searchTerm.validity.valid) {
+    errorArea.classList.remove("hidden");
+    errorArea.textContent = "No searching over 100 characters";
+    throw "Too long";
+  } else {
+    errorArea.classList.add("hidden");
+  }
 }
 
 function createLinkBox(website) {
