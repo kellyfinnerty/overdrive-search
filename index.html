@@ -14,8 +14,9 @@
     <header>
         <h1><i>Overdrive</i> Search</h1>
         <form id="overdrive-search">
-            <input type="text" id="search" placeholder="Search a book, author or both..." minlength="1" required>
-            <button id="submit"><i class="fas fa-search"></i></button>
+            <input type="text" id="search" placeholder="Search a book, author or both..." minlength="1" maxlength="100" required>
+            <button id="submit" ><i class="fas fa-search"></i></button>
+            <small id="search-error" class="error hidden">Search must be between 1 and 100 characters</small>
         </form>
         <button id="manage-user-sites">Manage Your Library Resources</button>
     </header>
