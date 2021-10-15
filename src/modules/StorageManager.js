@@ -28,7 +28,7 @@ mySites.addWebsite(
   "https://ocln.overdrive.com/ocln-visitor/content/search?query="
 );
 mySites.addWebsite("SAILS", "https://sails.overdrive.com/search?query=");
-mySites.addWebsite("mcgill", "https://mcgill.overdrive.com/search?query=");
+mySites.addWebsite("McGill", "https://mcgill.overdrive.com/search?query=");
 
 export default mySites;
 

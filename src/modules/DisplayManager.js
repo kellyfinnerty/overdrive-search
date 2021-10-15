@@ -47,15 +47,13 @@ function checkInputValidity() {
   const errorArea = document.getElementById("search-error");
 
   if (searchTerm.validity.valueMissing) {
-    errorArea.classList.remove("hidden");
     errorArea.textContent = "Please type something before searching!";
     throw "Please type something before searching!";
   } else if (!searchTerm.validity.valid) {
-    errorArea.classList.remove("hidden");
-    errorArea.textContent = "No searching over 100 characters";
+    errorArea.textContent = "Max search of 100 characters";
     throw "Too long";
   } else {
-    errorArea.classList.add("hidden");
+    errorArea.textContent = "";
   }
 }
 
@@ -67,7 +65,7 @@ function createLinkBox(website) {
   const overdriveLink = document.createElement("a");
   overdriveLink.classList.add("overdrive-link");
   overdriveLink.href = website.siteUrl;
-  overdriveLink.innerHTML = `<div>${website.siteName}<div>`;
+  overdriveLink.innerHTML = `${website.siteName}`;
   overdriveLink.target = "_blank";
 
   container.appendChild(overdriveLink);

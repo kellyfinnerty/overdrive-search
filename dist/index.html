@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Overdrive Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <title>Find that Book</title>
 
     <script src="https://kit.fontawesome.com/a7fb50af58.js" crossorigin="anonymous"></script>
     <script defer src="main.bundle.js"></script>
 </head>
 <body>
-    <header>
-        <h1><i>Overdrive</i> Search</h1>
+    <header class="header">
+        <h1 class="logo">Find that Book</h1>
         <form id="overdrive-search">
-            <input type="text" id="search" placeholder="Search a book, author or both..." minlength="1" maxlength="100" required>
+            <input type="text" id="search" class="search" 
+            placeholder="Search a book, author or both..." minlength="1" maxlength="100" required>
             <button id="submit" ><i class="fas fa-search"></i></button>
-            <small id="search-error" class="error hidden">Search must be between 1 and 100 characters</small>
+            <small id="search-error" class="error"></small>
         </form>
-        <button id="manage-user-sites">Manage Your Library Resources</button>
+        <button id="manage-user-sites">My Account</button>
     </header>
     
     <main>
@@ -46,7 +48,7 @@
 
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Created by Kelly Finnerty</p>
     </footer>
 </body>
