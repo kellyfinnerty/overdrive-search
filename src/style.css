@@ -24,12 +24,6 @@
     font-size: 2.4em;
 }
 
-.search-container{
-    display: grid;
-    justify-content: center;
-    grid-auto-columns: 100%;
-}
-
 #manage-user-sites{
     height: 3em;
     width: 7em;
@@ -105,7 +99,7 @@ button:hover{
     font-size: 1.1em;
     padding: 0.5em;
     justify-self: center;
-    width: 50%;
+    width: 48%;
 }
 .hidden{
     display: none;
@@ -113,7 +107,7 @@ button:hover{
 
 #results-container{
     display: grid;
-    grid-template-rows: 5em 3em auto;
+    grid-template-rows: 4em 3em auto;
     grid-auto-columns: auto;
     width: 100%;
     gap: 1em;
@@ -129,7 +123,7 @@ button:hover{
     height: auto;
     grid-template-columns: repeat(2, 50%);
     grid-auto-rows: auto;
-    gap: 1.2em;
+    gap: 20px 0px;
     align-items: center;
     justify-self: center;
 }
@@ -145,6 +139,7 @@ button:hover{
     text-align: center;
     font-size: 1.5em;
     word-wrap: break-word;
+    justify-self: center;
 }
 
 .overdrive-link div{
@@ -180,4 +175,83 @@ button:hover{
     position: fixed;
     bottom: 0;
     left: 40%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .header{
+        grid-template-columns: 70% auto;
+        grid-template-areas: 'logo manage'
+                             'search search';
+        justify-content: center;
+        align-content: center;
+    } 
+
+    .logo{
+        font-size: 1.8em;
+        grid-area: logo;
+        margin-top: 0.3em;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    #overdrive-search{
+        grid-area: search;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .search{
+        color: white;
+        font-size: 0.95em;
+        margin: 1em 0 0 0;
+        padding: 0.5em;
+        padding-left: 2.3em;
+        width: 85%;
+    }
+
+    #manage-user-sites{
+        height: 2em;
+        width: 6.5em;
+        font-size: 0.9em;
+        margin-top: 0.95em;
+    }
+
+    #submit{
+        font-size: .9em;
+        left: 1.1em;
+        top: 6.3em;
+    }
+
+
+    .search-container{
+        margin-top: 3em;
+    }
+
+    #results-container h2{
+        font-size: 1.3em;
+    }
+
+    #links-container{
+        width: 90%;
+        grid-template-columns: repeat(2, 50%);
+        gap: 0.7em;
+    }
+
+    .overdrive-link{
+        background-color: var(--orange);
+        border: solid 1px var(--gold);
+        border-radius: 3px;
+        width: 90%;
+        height: 90%;
+        padding-top: 0.3em;
+        font-size: 1.2em;
+    }
+
+    .footer{
+        left: 30%;
+        font-size: 0.8em;
+    }
 }
